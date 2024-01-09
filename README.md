@@ -1,8 +1,8 @@
 # ExpressJS
 
-Take a reference of ARC Tutorials
+- Take a reference of ARC Tutorials
 
-#01 : Introduction
+## 01 : Introduction
 
 - What is Express JS?
 
@@ -20,14 +20,14 @@ Take a reference of ARC Tutorials
   - What suits you best is the best way forward!!!
   - It is very flexible and pluggable.
 
-#02 : Installation
+## 02 : Installation
 
 - Install NodeJS first
 - For installing express js hit the command in terminal "npm i express"
 - Also install nodemon for automatic restart your server "npm i nodemon"
 - For using ES6 method for importing you need to add this property in your package.json file {"type": "module"}
 
-#03 : Hello World
+## 03 : Hello World
 
 - Let's breakdown each line by line and understand completely
 - The first line imports Express in our file. We have access to it through the variable Express. We use it to create an application and assign it to var app.
@@ -36,7 +36,7 @@ Take a reference of ARC Tutorials
 - The callback function has 2 parameters, request(req) and response(res).
 - The request object(req) represents the HTTP request and has properties for the request query string parameters, body, HTTP headers, etc. Similarly, the response object represents the HTTP response that the Express app sends when it receives an HTTP request.
 
-#05 : POSTMAN App
+## 05 : POSTMAN App
 
 - POSTMAN is a cool tool to do all API testing
 - We can make Requests via different HTTP Methods
@@ -46,7 +46,7 @@ Take a reference of ARC Tutorials
 - We can export collections
 - We can create documentation for APIs as well
 
-#06 : HTTP Methods (POST, GET, PUT, DELETE)
+## 06 : HTTP Methods (POST, GET, PUT, DELETE)
 
 - Create - Create new resource
 - Read - Read resource from server
@@ -66,7 +66,7 @@ Take a reference of ARC Tutorials
 - PUT = Update
 - Delete = Delete
 
-#07 : Routing in Express JS
+## 07 : Routing in Express JS
 
 - A route is a section of Express code that associates an HTTP verb (GET, POST, PUT, DELETE, etc.), a URL path/pattern, and a function that is called to handle that pattern
 - Using app.method we can easily configure routes in our application
@@ -79,14 +79,14 @@ Take a reference of ARC Tutorials
   - app.put(/user/update')
   - app.delete(/user/delete')
 
-#08 : Router
+## 08 : Router
 
 - Over the period of time routes grow in size and is extremely difficult to manage
 - One of the beauty of ExpressJS Framework is how easy it is to manage the code
 - Using modular approach using Router we can easily develop, maintain and extend routes
 - We will need to get the Router object and then create routes for the modules
 
-#09 : Dynamic Routes
+## 09 : Dynamic Routes
 
 - ExpressJS allows to build URL's dynamically as well
 - Often we need to work with content/id's which are dynamic in nature and NOT static values
@@ -98,7 +98,7 @@ Take a reference of ARC Tutorials
 
 - Go through code
 
-#10 : URL Building using Regex
+## 10 : URL Building using Regex
 - Passing multiple dynamic values
 - app.get('/users/:name/:id', function(req, res) {\
 res.send('id:'+ req.params.id + 'and name:' + req.params.name);\
@@ -112,7 +112,7 @@ res.send('id: ' + req.params.id);\
 
 - "/searchFor/:key([0-9]{3})" here [0-9] for digits only and {3} for allowing only 3 digits
 
-#11 : Wild Card Routes
+## 11 : Wild Card Routes
 - We can setup wild card routes just in case where we don't match any routes
 - app.get('/*', function(req, res){\
 res.send(Wild card matching");\
@@ -120,7 +120,7 @@ res.send(Wild card matching");\
 
 - Visit through code
 
-#12 : Middleware
+## 12 : Middleware
 - What's middleware? Why we need them?
 - Middleware functions are functions that have access to the request object (req), the response object (res), and the next middleware function in the application's request response cycle.
 - These functions are used to modify req and res objects for tasks like parsing request bodies, adding response headers, etc
@@ -132,7 +132,7 @@ res.send(Wild card matching");\
   - check if all data is present:
   - check if is active
 
-#13 : Express Generator
+## 13 : Express Generator
 - What's Express Generator?
 - Use the application generator tool, express-generator, to quickly create an application skeleton.
 - Easily get standard application shell for quick and rapid prototyping
@@ -172,7 +172,7 @@ res.send(Wild card matching");\
 
 - We should see a node_modules folder
 
-#14 : Templating and Template Engines
+## 14 : Templating and Template Engines
 - Use cases for Express/Node Backend
 - Implement only as an API layer
 - Expose only APIs or endpoints
@@ -199,7 +199,7 @@ res.send(Wild card matching");\
     - title= title
     - body
     - h1= message
-  - Step #3 - app.get('/', function (req, res) {\
+  - Step ## 3 - app.get('/', function (req, res) {\
 res.render('index', { title: 'Hey', message: 'Hello there!' })\
 })
 
@@ -209,11 +209,11 @@ res.render('index', { title: 'Hey', message: 'Hello there!' })\
   - This project was formerly known as "Jade."
   - Pug is a high performance template engine heavily influenced by Html and implemented with JavaScript for Node
 
-#15 : Introduction to MongoDB
+## 15 : Introduction to MongoDB
 
 - Visit to the mongodb repo
 
-#16 : Introduction to Mongoose JS
+## 16 : Introduction to Mongoose JS
 - What is Mongoose?
 - Elegant mongodb object modeling for node.js
 - Mongoose provides a straight-forward, schema-based solution to model your application data.
@@ -223,17 +223,17 @@ res.render('index', { title: 'Hey', message: 'Hello there!' })\
 - To Install Mongoose in our Express Application
   - npm i mongoose --save
 
-#17 : Connect to MongoDB using Mongoose
+## 17 : Connect to MongoDB using Mongoose
 - To connect to MongoDB - Follow the below steps
-  - Step #1 - var mongoose = require('mongoose');
-  - Step #2 - Create a Properties File
-  - Step #3 - Import the properties file in index.js file
-  - Step #4 - mongoose.connect(dbURL);
-  - Step #5 - mongoose.connection.on('connected', function()\
+  - Step 1 - var mongoose = require('mongoose');
+  - Step 2 - Create a Properties File
+  - Step 3 - Import the properties file in index.js file
+  - Step 4 - mongoose.connect(dbURL);
+  - Step 5 - mongoose.connection.on('connected', function()\
 console.log/"Mongoose default connection is open to ", dbURL);\
 );
 
-#18 : Live Project Architecture
+## 18 : Live Project Architecture
 - Live Project Architecture and Blue Print
 - We will build the backend layer of API endpoints for a SimpleCRM application
 - How do we model our app?
@@ -248,7 +248,7 @@ console.log/"Mongoose default connection is open to ", dbURL);\
 
 - See my folder structures
 
-#19 : MongoDB CRUD Operations
+## 19 : MongoDB CRUD Operations
 - Step 1 - Create Express Generator app
 - Step 2 - Install Mongoose Library
 - Step 3 - Import Mongoose Library in our app.js
@@ -259,12 +259,12 @@ console.log/"Mongoose default connection is open to ", dbURL);\
 - Step 6 - Create a Mongoose Model of the same schema collection
 - Step 7 - Import the newly created Model into app.js
 
-#20 : MongoDB CRUD Create/Post
+## 20 : MongoDB CRUD Create/Post
 - Step 8 - Create the mongoDB connection
 - Step 9 - Create new Object of Model
 - Step 10 - Call "Save" methos -› Create/POST method for our collection
 
-#21 : MongoDB CRUD Dynamic Data Create/Post
+## 21 : MongoDB CRUD Dynamic Data Create/Post
 - Step 11 - Refactor our code
 
 - made the method - POST
@@ -273,7 +273,7 @@ console.log/"Mongoose default connection is open to ", dbURL);\
 
 - Step 12 - Using POSTman
 
-#22 : MongoDB CRUD Read/GET
+## 22 : MongoDB CRUD Read/GET
 - Step 13 - Reading data from collections find
 - Read all data from collection
 - Read some data based on conditions
@@ -282,7 +282,7 @@ console.log/"Mongoose default connection is open to ", dbURL);\
 - Read a particular data
   - findById
 
-#23 : MongoDB CRUD Update/PUT
+## 23 : MongoDB CRUD Update/PUT
 - Update has 3 methods
 - findOneAndUpdate
   - Student.findOneAndUpdate({name: "ARC"}, {age: 40}, function(err, response) {\
@@ -298,7 +298,7 @@ function(err, response){\
 console.log(response);\
 });
 
-#24 : MongoDB CRUD Delete
+## 24 : MongoDB CRUD Delete
 - Delete Documents
 - Remove
 - findByldAndRemove
